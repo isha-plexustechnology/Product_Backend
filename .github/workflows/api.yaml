@@ -33,7 +33,7 @@ jobs:
 
       - name: Create ZIP Package for Beanstalk
         run: |
-          zip -r deploy.zip . -x ".git/*" ".github/*" "tests/*" "README.md"
+          zip -r deploy.zip . -x ".git/*" ".github/*" "tests/*" "node_modules/*" "README.md"
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
